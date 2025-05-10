@@ -25,11 +25,11 @@ public class Employee {
 	}
 	
 	//Getters and Setters
-	public Long getId() {
+	public Long getEmpId() {
 		return empId;
 	}
 
-	public void setId(Long id) {
+	public void setEmpId(Long id) {
 		this.empId = id;
 	}
 
