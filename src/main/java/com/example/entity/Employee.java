@@ -8,54 +8,54 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long empId;
 	
 	@Column(nullable = false)
-	private String name;
+	private String empName;
 	
 	@Column(nullable = false)
-	private String role;
+	private String empRole;
 	
 	//Constructors
 	public Employee() {}
 	
-	public Employee(String name, String role) {
-		this.name = name;
-		this.role = role;
+	public Employee(String empName, String empRole) {
+		this.empName = empName;
+		this.empRole = empRole;
 	}
 	
 	//Getters and Setters
 	public Long getId() {
-		return id;
+		return empId;
 	}
 
 	public void setId(Long id) {
-		this.id = id;
+		this.empId = id;
 	}
 
 	public String getName() {
-		return name;
+		return empName;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.empName = name;
 	}
 
 	public String getRole() {
-		return role;
+		return empRole;
 	}
 
 	public void setRole(String role) {
-		this.role = role;
+		this.empRole = role;
 	}
 	
 	//toString() method for debugging
 	@Override
 	public String toString() {
 		return "Employee{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				", role='" + role + '\'' +
+				"id=" + empId +
+				", name='" + empName + '\'' +
+				", role='" + empRole + '\'' +
 				'}';
 	}
 	
