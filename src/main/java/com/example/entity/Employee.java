@@ -3,62 +3,60 @@ package com.example.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="employees")
+@Table(name = "employees") // Matches the database table name
 public class Employee {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long empId;
-	
-	@Column(nullable = false)
-	private String empName;
-	
-	@Column(nullable = false)
-	private String empRole;
-	
-	//Constructors
-	public Employee() {}
-	
-	public Employee(String empName, String empRole) {
-		this.empName = empName;
-		this.empRole = empRole;
-	}
-	
-	//Getters and Setters
-	public Long getEmpId() {
-		return empId;
-	}
 
-	public void setEmpId(Long id) {
-		this.empId = id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long empId;
 
-	public String getName() {
-		return empName;
-	}
+    @Column(nullable = false)
+    private String empName;
 
-	public void setName(String name) {
-		this.empName = name;
-	}
+    @Column(nullable = false)
+    private String empRole;
 
-	public String getRole() {
-		return empRole;
-	}
+    // Default constructor
+    public Employee() {}
 
-	public void setRole(String role) {
-		this.empRole = role;
-	}
-	
-	//toString() method for debugging
-	@Override
-	public String toString() {
-		return "Employee{" +
-				"id=" + empId +
-				", name='" + empName + '\'' +
-				", role='" + empRole + '\'' +
-				'}';
-	}
-	
-	
+    // Parameterized constructor
+    public Employee(String empName, String empRole) {
+        this.empName = empName;
+        this.empRole = empRole;
+    }
 
+    // Getters and Setters
+    public Long getEmpId() {
+        return empId;
+    }
+
+    public void setEmpId(Long empId) {
+        this.empId = empId;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
+    public String getEmpRole() {
+        return empRole;
+    }
+
+    public void setEmpRole(String empRole) {
+        this.empRole = empRole;
+    }
+
+    // toString() method for debugging
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + empId +
+                ", name='" + empName + '\'' +
+                ", role='" + empRole + '\'' +
+                '}';
+    }
 }
